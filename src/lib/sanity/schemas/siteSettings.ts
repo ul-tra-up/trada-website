@@ -31,6 +31,4 @@ export const siteSettings = defineType({
       ],
     }),
   ],
-  // Singleton — only one document
-  __experimental_actions: ["update", "publish"],
 });

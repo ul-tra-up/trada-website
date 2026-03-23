@@ -3,7 +3,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import Link from "next/link";
-import type { Metadata } from "next";
 
 const featureData = {
   "copy-trading": {
@@ -183,35 +182,9 @@ const featureData = {
   },
 };
 
-export function generateStaticParams() {
-  return [
-    { slug: "copy-trading" },
-    { slug: "multi-broker-aggregator" },
-    { slug: "strategy-marketplace" },
-    { slug: "automated-guardrails" },
-    { slug: "trade-journaling" },
-  ];
-}
-
 interface PageProps {
   params: {
     slug: string;
-  };
-}
-
-export async function generateMetadata({
-  params,
-}: PageProps): Promise<Metadata> {
-  const feature =
-    featureData[params.slug as keyof typeof featureData] ||
-    featureData["copy-trading"];
-  return {
-    title: feature.title,
-    description: feature.description,
-    openGraph: {
-      title: `${feature.title} | Trada`,
-      description: feature.description,
-    },
   };
 }
 
