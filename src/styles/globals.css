@@ -1,0 +1,153 @@
+@import "tailwindcss";
+
+/* ============================================
+   TRADA DESIGN TOKENS
+   Based on Brand Guidelines v1 (January 2026)
+   ============================================ */
+
+@theme {
+  /* Brand Colors */
+  --color-trada-red: #FF1744;
+  --color-trada-yellow: #F3E500;
+  --color-trada-black: #000000;
+  --color-trada-mute: #C4C4C4;
+  --color-trada-white: #FFFFFF;
+
+  /* Neutral Colors (Digital interfaces) */
+  --color-neutral-text: #263238;
+  --color-neutral-icon: #78909C;
+  --color-neutral-mute: #B0BEC5;
+  --color-neutral-bg: #ECEFF1;
+
+  /* Dark Theme */
+  --color-dark-bg: #0A0A0A;
+  --color-dark-surface: #141414;
+  --color-dark-surface-2: #1A1A1A;
+  --color-dark-border: #262626;
+  --color-dark-text: #FAFAFA;
+  --color-dark-text-muted: #A0A0A0;
+
+  /* Semantic Colors */
+  --color-success: #00C853;
+  --color-warning: #FFD600;
+  --color-error: #FF1744;
+  --color-info: #2979FF;
+
+  /* Typography Scale */
+  --font-display: "Inter", "Helvetica Neue", "Helvetica", system-ui, sans-serif;
+  --font-body: "Inter", "Helvetica Neue", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", ui-monospace, monospace;
+
+  /* Spacing (based on 4px grid) */
+  --spacing-section: 120px;
+  --spacing-section-sm: 80px;
+
+  /* Border Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* Container */
+  --container-max: 1280px;
+  --container-narrow: 768px;
+}
+
+/* ============================================
+   BASE STYLES
+   ============================================ */
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-dark-bg);
+  color: var(--color-dark-text);
+  line-height: 1.6;
+}
+
+/* Selection */
+::selection {
+  background-color: var(--color-trada-red);
+  color: var(--color-trada-white);
+}
+
+/* Focus ring */
+:focus-visible {
+  outline: 2px solid var(--color-trada-red);
+  outline-offset: 2px;
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+.container-trada {
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+@media (min-width: 768px) {
+  .container-trada {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-trada {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+}
+
+/* Text gradient utility */
+.text-gradient-red {
+  background: linear-gradient(135deg, var(--color-trada-red) 0%, #FF6B6B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glassmorphism card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-lg);
+}
+
+/* Smooth fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s var(--ease-smooth) forwards;
+}
+
+/* Grid background pattern */
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+/* Glow effect */
+.glow-red {
+  box-shadow: 0 0 60px rgba(255, 23, 68, 0.15);
+}
