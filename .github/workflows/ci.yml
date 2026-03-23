@@ -27,7 +27,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
-          cache: 'npm'
 
       - name: Install dependencies
         run: npm install
@@ -44,7 +43,6 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     timeout-minutes: 30
-    needs: lint-and-type-check
 
     steps:
       - name: Checkout code
@@ -54,7 +52,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
-          cache: 'npm'
 
       - name: Install dependencies
         run: npm install
@@ -68,15 +65,6 @@ jobs:
           SANITY_API_TOKEN: ${{ secrets.SANITY_API_TOKEN || 'placeholder-token' }}
           NEXT_PUBLIC_SITE_URL: 'https://trada.io'
           NEXT_PUBLIC_APP_URL: 'https://app.trada.io'
-
-      - name: Upload build artifacts
-        if: success()
-        uses: actions/upload-artifact@v4
-        with:
-          name: build-artifacts
-          path: .next
-          retention-days: 1
-          if-no-files-found: ignore
 
   security-audit:
     name: Security Audit
