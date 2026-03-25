@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import Link from "next/link";
 import type { Metadata } from "next";
 
@@ -22,29 +21,26 @@ export default function PrivacyPolicyPage() {
         </div>
 
         <div className="container-trada relative z-10 text-center">
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
+          <h1             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="text-4xl md:text-5xl font-bold tracking-tight mb-6"
           >
             Privacy Policy
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
+          </h1>
+          <p             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
             className="text-[var(--color-dark-text-muted)]"
           >
             Last updated: March 2025
-          </motion.p>
+          </p>
         </div>
       </section>
 
       {/* Content */}
       <section className="py-[var(--spacing-section)] relative">
         <div className="container-trada max-w-3xl">
-          <motion.div
-            initial={{ opacity: 0 }}
+          <div             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
             className="space-y-8 text-[var(--color-dark-text-muted)]"
@@ -271,15 +267,14 @@ export default function PrivacyPolicyPage() {
                 regulatory compliance.
               </p>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* CTA */}
       <section className="py-[var(--spacing-section)] relative overflow-hidden border-t border-white/10">
         <div className="container-trada max-w-3xl">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+          <div             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-center"
@@ -293,7 +288,7 @@ export default function PrivacyPolicyPage() {
             >
               Contact Us
             </Link>
-          </motion.div>
+          </div>
         </div>
       </section>
     </>

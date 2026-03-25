@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import Link from "next/link";
 import type { Metadata } from "next";
 
@@ -547,8 +546,7 @@ export default function BlogPostPage({ params }: PageProps) {
         </div>
 
         <div className="container-trada relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
+          <div             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             className="flex items-center gap-3 mb-6"
           >
@@ -561,19 +559,17 @@ export default function BlogPostPage({ params }: PageProps) {
                 {post.date}
               </span>
             </div>
-          </motion.div>
+          </div>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
+          <h1             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
             className="text-4xl md:text-6xl font-bold tracking-tight mb-6 max-w-3xl"
           >
             {post.title}
-          </motion.h1>
+          </h1>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+          <div             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
             className="flex items-center gap-6 text-[var(--color-dark-text-muted)]"
@@ -581,15 +577,14 @@ export default function BlogPostPage({ params }: PageProps) {
             <span>By {post.author}</span>
             <span>•</span>
             <span>{post.readTime}</span>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Article Content */}
       <section className="py-[var(--spacing-section)] relative">
         <div className="container-trada max-w-3xl">
-          <motion.article
-            initial={{ opacity: 0 }}
+          <article             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
             className="prose prose-invert max-w-none"
@@ -626,8 +621,7 @@ export default function BlogPostPage({ params }: PageProps) {
       {/* Author & Navigation */}
       <section className="py-[var(--spacing-section)] relative overflow-hidden border-t border-white/10">
         <div className="container-trada max-w-3xl">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+          <div             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="glass-card p-8 mb-12"
@@ -640,10 +634,9 @@ export default function BlogPostPage({ params }: PageProps) {
               Part of the Trada team sharing insights on trading, engineering,
               and product. Have questions? Reach out to us at hello@trada.io
             </p>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+          <div             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="flex gap-4"
@@ -660,7 +653,7 @@ export default function BlogPostPage({ params }: PageProps) {
             >
               Get Started
             </Link>
-          </motion.div>
+          </div>
         </div>
       </section>
     </>
