@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import Link from "next/link";
 
 
@@ -258,4 +258,3 @@ export default function BlogPage() {
   );
 }
 
-import React from "react";
