@@ -3,18 +3,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import Link from "next/link";
-import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "About",
-  description:
-    "Making trading infrastructure easier to understand and run. Trada is built by traders, for traders.",
-  openGraph: {
-    title: "About | Trada",
-    description:
-      "Making trading infrastructure easier to understand and run. Trada is built by traders, for traders.",
-  },
-};
 
 const values = [
   {

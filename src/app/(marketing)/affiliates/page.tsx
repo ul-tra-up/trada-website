@@ -3,18 +3,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import Link from "next/link";
-import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Affiliates",
-  description:
-    "Join the Trada affiliate program. Earn commissions for every trader you refer.",
-  openGraph: {
-    title: "Affiliates | Trada",
-    description:
-      "Join the Trada affiliate program. Earn commissions for every trader you refer.",
-  },
-};
 
 const benefits = [
   {

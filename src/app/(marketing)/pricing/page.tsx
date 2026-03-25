@@ -3,18 +3,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import Link from "next/link";
-import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Pricing",
-  description:
-    "Simple, transparent pricing for traders. Free plan via partner accounts, Pro at $49/month, and Enterprise for teams.",
-  openGraph: {
-    title: "Pricing | Trada",
-    description:
-      "Simple, transparent pricing for traders. Free plan via partner accounts, Pro at $49/month, and Enterprise for teams.",
-  },
-};
 
 const tiers = [
   {

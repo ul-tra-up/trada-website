@@ -3,18 +3,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import Link from "next/link";
-import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Blog",
-  description:
-    "Trading insights, platform updates, and engineering deep-dives from the Trada team.",
-  openGraph: {
-    title: "Blog | Trada",
-    description:
-      "Trading insights, platform updates, and engineering deep-dives from the Trada team.",
-  },
-};
 
 const blogPosts = [
   {
@@ -82,7 +71,7 @@ const blogPosts = [
 const categories = ["All", "Trading", "Engineering", "Product", "Tutorial"];
 
 export default function BlogPage() {
-  const [selectedCategory, setSelectedCategory] = React.useState("All");
+  const [selectedCategory, setSelectedCategory] = useState("All");
   const postsRef = useRef(null);
   const postsInView = useInView(postsRef, { once: true, margin: "-100px" });
 

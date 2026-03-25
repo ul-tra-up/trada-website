@@ -3,18 +3,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import Link from "next/link";
-import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Features",
-  description:
-    "Copy trading, multi-broker aggregation, strategy marketplace, automated guardrails, and trade journaling. Everything you need in one platform.",
-  openGraph: {
-    title: "Features | Trada",
-    description:
-      "Copy trading, multi-broker aggregation, strategy marketplace, automated guardrails, and trade journaling. Everything you need in one platform.",
-  },
-};
 
 const features = [
   {

@@ -2,18 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Contact",
-  description:
-    "Get in touch with the Trada team. Sales inquiries, support, partnerships, and more.",
-  openGraph: {
-    title: "Contact | Trada",
-    description:
-      "Get in touch with the Trada team. Sales inquiries, support, partnerships, and more.",
-  },
-};
 
 const contactMethods = [
   {
