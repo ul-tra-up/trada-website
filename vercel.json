@@ -3,7 +3,9 @@
   "devCommand": "npm run dev --turbopack",
   "installCommand": "npm install",
   "framework": "nextjs",
-  "regions": ["iad1"],
+  "regions": [
+    "iad1"
+  ],
   "headers": [
     {
       "source": "/(.*)",
@@ -103,5 +105,5 @@
     "deploymentEnabled": {
       "main": true
     }
-  },
+  }
 }
