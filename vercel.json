@@ -4,12 +4,6 @@
   "installCommand": "npm install",
   "framework": "nextjs",
   "regions": ["iad1"],
-  "functions": {
-    "src/**/*.{js,ts}": {
-      "maxDuration": 60,
-      "memory": 1024
-    }
-  },
   "headers": [
     {
       "source": "/(.*)",
@@ -122,10 +116,4 @@
       "main": true
     }
   },
-  "crons": [
-    {
-      "path": "/api/crons/revalidate-content",
-      "schedule": "0 */6 * * *"
-    }
-  ]
 }
